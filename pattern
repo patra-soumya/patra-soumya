@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+	int row,col,flag;
+	char arr[10]={' ','A','B','C','D','E','F','G','H','I'};
+	for(row=1;row<=10;row++)
+	{
+		for(col=1;col<=(10-row);col++)
+		{
+			printf(" ");
+		}
+		for(col=1;col<=row;col++)
+		{
+			printf("%d",col);
+		}
+		flag=row-1;
+		for(col=1;col<row;col++)
+		{
+		if(flag>0)
+	    	{
+		      printf("%c",arr[flag]);
+		      flag--;
+        	}
+		}
+		printf("\n");
+	}
+	return 0;
+}
